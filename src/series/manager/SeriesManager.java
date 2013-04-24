@@ -9,7 +9,6 @@ package series.manager;
  * @author ronnie
  */
 public class SeriesManager {
-
     /**
      * @param args the command line arguments
      */

@@ -6,7 +6,6 @@ package series.manager;
 
 import javax.swing.tree.DefaultMutableTreeNode;
 import javax.swing.tree.DefaultTreeModel;
-import javax.swing.tree.TreeModel;
 
 /**
  *
@@ -18,8 +17,10 @@ public class MainFORM extends javax.swing.JFrame {
      * Creates new form MainFORM
      */
     public MainFORM() {
-        
         initComponents();
+        DefaultMutableTreeNode root = new DefaultMutableTreeNode("");
+        DefaultTreeModel modelo = new DefaultTreeModel(root);
+        jTree1.setModel(modelo);
     }
 
     /**
@@ -189,11 +190,12 @@ public class MainFORM extends javax.swing.JFrame {
             java.util.logging.Logger.getLogger(MainFORM.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
-
+        
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
                 new MainFORM().setVisible(true);
+                
             }
         });
     }
